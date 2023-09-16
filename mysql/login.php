@@ -1,24 +1,12 @@
 <?php
-    if(isset($_POST['submit'])){
-        $name = $_POST['username'];
-        $password = $_POST['password'];
-        echo "your name is $name and your password $password";
-    }
+include './template/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/bs.min.css">
-    <script src="../assets/bs.min.js"></script>
-    <title>Login</title>
-</head>
-<body>
     <div class="container">
         <div class="row mt-5 justify-content-center align-items-center">
             <div class="col-xs-4 col-xs-offset-4 w-50">
-                <form action="login.php" method="post">
+            <h3>Create User</h3>
+
+                <form action="create_user.php" method="post">
                     <div class="form-group">
                         <label for="username">User Name</label>
                         <input type="text" name="username" class="form-control">
@@ -32,5 +20,6 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+<?php
+include './template/footer.php';
+?>
